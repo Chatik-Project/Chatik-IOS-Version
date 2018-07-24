@@ -11,5 +11,6 @@ target 'Chatik-Project' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
 	pod 'Alamofire'
+    pod 'Socket.IO-Client-Swift', '~> 13.2.0'
 pod 'SCLAlertView'
 end

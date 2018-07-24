@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C1E6FFB321060475007B10FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E6FFB221060475007B10FF /* AppDelegate.swift */; };
-		C1E6FFB521060475007B10FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E6FFB421060475007B10FF /* ViewController.swift */; };
 		C1E6FFB821060475007B10FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E6FFB621060475007B10FF /* Main.storyboard */; };
 		C1E6FFBA21060477007B10FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E6FFB921060477007B10FF /* Assets.xcassets */; };
 		C1E6FFBD21060477007B10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E6FFBB21060477007B10FF /* LaunchScreen.storyboard */; };
@@ -40,7 +39,6 @@
 		89C263EF65B2DF7DA5AF53CC /* Pods_Chatik_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatik_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E6FFAF21060475007B10FF /* Chatik-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatik-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E6FFB221060475007B10FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1E6FFB421060475007B10FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1E6FFB721060475007B10FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1E6FFB921060477007B10FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1E6FFBC21060477007B10FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C1E6FFB221060475007B10FF /* AppDelegate.swift */,
-				C1E6FFB421060475007B10FF /* ViewController.swift */,
 				C1E6FFB621060475007B10FF /* Main.storyboard */,
 				C1E6FFB921060477007B10FF /* Assets.xcassets */,
 				C1E6FFBB21060477007B10FF /* LaunchScreen.storyboard */,
@@ -291,6 +288,8 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -302,6 +301,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -335,7 +336,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E6FFB521060475007B10FF /* ViewController.swift in Sources */,
 				C1E6FFB321060475007B10FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
