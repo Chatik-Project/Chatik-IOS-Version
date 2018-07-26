@@ -9,16 +9,20 @@
 import Foundation
 var messageBase = Array<Message>()
 struct Message {
-        var text: String
+        var content: String
+        
         var username: String
-        var addedAt: String
+        
+        var date: String
         
         
-        init (text: String, username: String, addedAt: String) {
+        init (content: String, username: String, date: String) {
             
-            self.text = text
+            self.content = content
+            
             self.username = username
-            self.addedAt = addedAt
+            
+            self.date = date
         }
     }
-}
+
