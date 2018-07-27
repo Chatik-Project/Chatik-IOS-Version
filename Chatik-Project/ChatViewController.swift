@@ -8,13 +8,14 @@
 
 import UIKit
 import SocketIO
+import SwiftyJSON
 
 class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var messageBase = Array<Message>()
-
+   
     var manager:SocketManager!
     var socket: SocketIOClient!
-    
+    let data2: [Any] = []
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -38,12 +39,11 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     @IBOutlet weak var ChatTableview: UITableView!
    
     @IBAction func SendMessageButton(_ sender: UIButton) {
- let  messa = Message(content: "dasda", username: "dasda", date: "dasda")
-        messageBase.append(messa)
-        //  socketIOClient.emit("msg", MessageText.text!)
+
+        socket.emit("msg", MessageText.text!)
        MessageText.text = nil
         self.ChatTableview.reloadData()
-   self.scrollToBottom()
+     //   self.scrollToBottom()
         return
     }
     
@@ -60,36 +60,31 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         manager = SocketManager(socketURL: URL(string: "http://138.68.234.86:7777/")!, config: [.log(true), .compress])
         socket = manager.defaultSocket
        
-        
-        
-       
-        
-        
-        socket.on("message", callback: { data, ack in
-                let content = data[0] as! String
-                let date = data[1] as! String
-                let username = data[2] as! String
-            
-                let message = Message(content: content, username: username, date: date)
-                print("Пиздец \(message)")
-                
-                
-                self.messageBase.append(message)
-                let indexPath = NSIndexPath(row: self.messageBase.count - 1, section: 0)
-                self.ChatTableview.insertRows(at: [indexPath as IndexPath], with: .automatic)
-                
-                self.ChatTableview.reloadData()
-   
-
-    
-        })
         socket.connect()
+      
+        socket.on("message", callback: { data, ack in
+            do {
+                self.socket.emit("receiveHistory", with: self.data2)
+                let json = JSON(data)
+                let data = json[0]
+                let content = data["content"].string
+                let date = data["date"].string
+                let username = data["username"].string
+                let message = Message(content: content!, username: username!, date: date!)
+               self.messageBase.append(message)
+              
+                self.ChatTableview.reloadData()
+                
+                }})
+      
+        
     }
    
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
         
       
@@ -100,7 +95,7 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     }
    
     func scrollToBottom() {
-        let lastRowIndexPath = NSIndexPath(row: self.messageBase.count - 1, section: 0)
+        let lastRowIndexPath = NSIndexPath(row: self.messageBase.count, section: 0)
         self.ChatTableview.scrollToRow(at: lastRowIndexPath as IndexPath, at: UITableViewScrollPosition.bottom, animated: true)
 }
     

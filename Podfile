@@ -6,11 +6,9 @@ target 'Chatik-Project' do
   use_frameworks!
 
   # Pods for twitter-project
-    pod 'RealmSwift'
-    pod 'Firebase/Core'
-    pod 'Firebase/Database'
-    pod 'Firebase/Auth'
+    
 	pod 'Alamofire'
     pod 'Socket.IO-Client-Swift', '~> 13.2.0'
+ pod 'SwiftyJSON', '~> 4.0'
 pod 'SCLAlertView'
 end
