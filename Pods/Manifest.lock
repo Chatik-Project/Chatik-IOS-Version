@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - IQKeyboardManagerSwift (6.0.4)
   - SCLAlertView (0.8)
   - Socket.IO-Client-Swift (13.2.1):
     - Starscream (~> 3.0.2)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - SCLAlertView
   - Socket.IO-Client-Swift (~> 13.2.0)
   - SwiftyJSON (~> 4.0)
@@ -15,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManagerSwift
     - SCLAlertView
     - Socket.IO-Client-Swift
     - Starscream
@@ -22,11 +25,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Socket.IO-Client-Swift: b94943e2fb916fe2f95244b9ed21828634002280
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 30d2fb76c5fc783dd05684ebaefd17cedc00b27c
+PODFILE CHECKSUM: 989386039187ecd512a059d7e38fc11ba32d739c
 
 COCOAPODS: 1.5.3

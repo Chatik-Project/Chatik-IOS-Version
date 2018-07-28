@@ -9,16 +9,19 @@
 import UIKit
 import Alamofire
 import SocketIO
-
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var name :String = ""
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        let anonimName = "You are connected as Apple Anonim \(arc4random_uniform(100001)+100000)"
+        name = anonimName
+        print(anonimName)
         
         return true
     }
@@ -37,13 +40,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-     
+                  IQKeyboardManager.shared.enable = true
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        
+    }
 
 }
 

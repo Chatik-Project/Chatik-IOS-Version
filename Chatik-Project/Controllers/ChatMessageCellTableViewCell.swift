@@ -15,16 +15,16 @@ class ChatMessageCellTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBOutlet weak var MessageText: UITextView!
     @IBOutlet weak var DateLable: UILabel!
     @IBOutlet weak var userNmae: UILabel!
     @IBOutlet weak var ProfilePhoto: UIImageView!
-    @IBOutlet weak var MessageText: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         ProfilePhoto.layer.cornerRadius = ProfilePhoto.frame.size.width / 2
       ProfilePhoto.clipsToBounds = true
-
-        // Configure the view for the selected state
+    
+      
     }
 
 }

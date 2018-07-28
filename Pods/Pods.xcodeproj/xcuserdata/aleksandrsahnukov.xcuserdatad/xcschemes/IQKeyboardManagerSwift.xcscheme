@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8E32DCBFD065131C6856CFE10441D40"
-               BuildableName = "Pods_Chatik_Project.framework"
-               BlueprintName = "Pods-Chatik-Project"
+               BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
+               BuildableName = "IQKeyboardManagerSwift.framework"
+               BlueprintName = "IQKeyboardManagerSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8E32DCBFD065131C6856CFE10441D40"
-            BuildableName = "Pods_Chatik_Project.framework"
-            BlueprintName = "Pods-Chatik-Project"
+            BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
+            BuildableName = "IQKeyboardManagerSwift.framework"
+            BlueprintName = "IQKeyboardManagerSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

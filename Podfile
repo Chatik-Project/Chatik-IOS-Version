@@ -11,4 +11,5 @@ target 'Chatik-Project' do
     pod 'Socket.IO-Client-Swift', '~> 13.2.0'
  pod 'SwiftyJSON', '~> 4.0'
 pod 'SCLAlertView'
+pod 'IQKeyboardManagerSwift'
 end

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11A74F4210BA9F100DC3639 /* ProfilefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */; };
 		C140D7512109E51600023F3A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C140D7502109E51600023F3A /* UserModel.swift */; };
+		C1516200210CD43100CDC0D9 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15161FF210CD43100CDC0D9 /* SocketManager.swift */; };
 		C17E42EB2109B6560040F94E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EA2109B6560040F94E /* ChatViewController.swift */; };
 		C17E42ED2109B6630040F94E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EC2109B6630040F94E /* MessageModel.swift */; };
 		C17E42EF2109B7480040F94E /* ChatMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */; };
@@ -41,7 +43,9 @@
 		11C5B8D038F0BFF52BF5AA1C /* Pods-Chatik-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatik-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatik-Project/Pods-Chatik-Project.release.xcconfig"; sourceTree = "<group>"; };
 		7E6B6830E72144555B169554 /* Pods-Chatik-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatik-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatik-Project/Pods-Chatik-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		89C263EF65B2DF7DA5AF53CC /* Pods_Chatik_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatik_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilefViewController.swift; sourceTree = "<group>"; };
 		C140D7502109E51600023F3A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C15161FF210CD43100CDC0D9 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		C17E42EA2109B6560040F94E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C17E42EC2109B6630040F94E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +98,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C11A74F5210BAA0200DC3639 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */,
+				C17E42EA2109B6560040F94E /* ChatViewController.swift */,
+				C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */,
+				C15161FF210CD43100CDC0D9 /* SocketManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C140D7522109E52000023F3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				C140D7522109E52000023F3A /* Model */,
-				C1E6FFB221060475007B10FF /* AppDelegate.swift */,
-				C1E6FFB621060475007B10FF /* Main.storyboard */,
-				C17E42EA2109B6560040F94E /* ChatViewController.swift */,
-				C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */,
+				C11A74F5210BAA0200DC3639 /* Controllers */,
 				C1E6FFB921060477007B10FF /* Assets.xcassets */,
 				C1E6FFBB21060477007B10FF /* LaunchScreen.storyboard */,
+				C1E6FFB221060475007B10FF /* AppDelegate.swift */,
+				C1E6FFB621060475007B10FF /* Main.storyboard */,
 				C1E6FFBE21060477007B10FF /* Info.plist */,
 			);
 			path = "Chatik-Project";
@@ -303,6 +317,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chatik-Project/Pods-Chatik-Project-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
@@ -311,6 +326,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
@@ -347,6 +363,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17E42ED2109B6630040F94E /* MessageModel.swift in Sources */,
+				C11A74F4210BA9F100DC3639 /* ProfilefViewController.swift in Sources */,
+				C1516200210CD43100CDC0D9 /* SocketManager.swift in Sources */,
 				C17E42EF2109B7480040F94E /* ChatMessageCellTableViewCell.swift in Sources */,
 				C17E42EB2109B6560040F94E /* ChatViewController.swift in Sources */,
 				C140D7512109E51600023F3A /* UserModel.swift in Sources */,

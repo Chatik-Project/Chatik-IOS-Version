@@ -23,12 +23,4 @@ struct Message {
         }
 
 }
-struct CustomData : SocketData {
-    var content: String
-    var username: String
-    var date: String
-    
-    func socketRepresentation() -> SocketData {
-        return ["content": content, "username": username,"date": date]
-    }
-}
+
