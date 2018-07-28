@@ -29,7 +29,7 @@ class ProfilefViewController: UIViewController {
             }
             alertController.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
                 let name:String = alertTextField.text!
-                    self.socket.emit("changeName", name)
+                    SocketIOManager.sharedInstance.chageNameTest(name: name)
               print(name)
             
               
@@ -50,18 +50,6 @@ class ProfilefViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        manager = SocketManager(socketURL: URL(string: "http://188.166.104.136:7777/")!, config: [.log(true), .compress])
-        socket = manager.defaultSocket
-        
-       
-        
-        
-        socket.on("connected") { data, ack in
-           self.socket.emit("changeName", "name")
-            }
-        }
-       
-        
        
     }
-
+}

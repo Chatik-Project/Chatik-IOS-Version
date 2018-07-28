@@ -8,25 +8,35 @@
 
 import Foundation
 import  SocketIO
+import SwiftyJSON
+var manager:SocketManager!
 
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
-    var socket = SocketIOClient(socketURL: URL(string: "https://your-ngrok-url.ngrok.io")!, config: [.log(false), .forcePolling(true)])
     
+static    let manager = SocketManager(socketURL: URL(string: "http://188.166.104.136:7777/")!, config: [.log(true), .compress])
+
+static  let socket = manager.defaultSocket
+
     override init() {
         super.init()
-        
-        socket.on("test") { dataArray, ack in
-            print(dataArray)
-        }
-        
     }
+    
     
     func establishConnection() {
-        socket.connect()
+        SocketIOManager.socket.connect()
     }
     
+    
     func closeConnection() {
-        socket.disconnect()
+        SocketIOManager.socket.disconnect()
     }
+    
+    func sendMessageTest (messageText:String) {
+        SocketIOManager.socket.emit("msg", messageText)
+    }
+    func chageNameTest (name :String) {
+        SocketIOManager.socket.emit("changeName", name)
+    }
+
 }

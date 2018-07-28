@@ -43,8 +43,7 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         if MessageText.text == "" {
             return
         } else {
-            socket.emit("msg", MessageText.text!)
-            socket.emit("changeName", MessageText.text!)
+      SocketIOManager.sharedInstance.sendMessageTest(messageText: MessageText.text!)
         }
        MessageText.text = nil
         self.ChatTableview.reloadData()
@@ -62,19 +61,7 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     
     override func viewDidLoad() {
        super.viewDidLoad()
-        manager = SocketManager(socketURL: URL(string: "http://188.166.104.136:7777/")!, config: [.log(true), .compress])
-        socket = manager.defaultSocket
-       
-        socket.connect()
-       
-      
-        socket.on("connected") { data, ack in
-        let json = JSON(data)
-        let status = json[0].string
-        self.onlineLable.text = status
-        self.reloadInputViews()
-            
-            self.socket.on("message") { data, ack in
+        SocketIOManager.socket.on("message") { data, ack in
             let json = JSON(data)
             let data = json[0]
             let content = data["content"].string
@@ -82,13 +69,18 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             let username = data["username"].string
             let message = Message(content: content!, username: username!, date: date!)
             self.messageBase.append(message)
-            //        self.scrollToBottom()
             self.ChatTableview.reloadData()
-            }
         }
-       
-         self.ChatTableview.reloadData()
+        //        self.scrollToBottom()
+        self.ChatTableview.reloadData()
+        
+        SocketIOManager.socket.on("connected") { data, ack in
+            let json = JSON(data)
+            let status = json[0].string
+            self.onlineLable.text = status
+        
     }
+}
     
     
     

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-       
+       SocketIOManager.sharedInstance.closeConnection()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
                   IQKeyboardManager.shared.enable = true
-        
+         SocketIOManager.sharedInstance.establishConnection()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
