@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let anonimName = "You are connected as Apple Anonim \(arc4random_uniform(100001)+100000)"
-        name = anonimName
-        print(anonimName)
-        
+   
         return true
     }
 

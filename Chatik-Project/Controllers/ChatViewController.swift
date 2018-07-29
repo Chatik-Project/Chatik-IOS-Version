@@ -10,11 +10,12 @@ import UIKit
 import SocketIO
 import SwiftyJSON
 
+
 class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var messageBase = Array<Message>()
     var manager:SocketManager!
     var socket: SocketIOClient!
-    
+    var statusOnline:String = ""
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,7 +61,14 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     
     
     override func viewDidLoad() {
-       super.viewDidLoad()
+      super.viewDidLoad()
+       
+   
+     //   ChatTableview.rowHeight = UITableViewAutomaticDimension
+        
+        
+        // get messages
+        
         SocketIOManager.socket.on("message") { data, ack in
             let json = JSON(data)
             let data = json[0]
@@ -69,18 +77,15 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             let username = data["username"].string
             let message = Message(content: content!, username: username!, date: date!)
             self.messageBase.append(message)
+            let indexPath = NSIndexPath(row: self.messageBase.count - 1, section: 0)
+            self.ChatTableview.insertRows(at: [indexPath as IndexPath], with: .automatic)
+            self.ChatTableview.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
             self.ChatTableview.reloadData()
         }
-        //        self.scrollToBottom()
+        
         self.ChatTableview.reloadData()
         
-        SocketIOManager.socket.on("connected") { data, ack in
-            let json = JSON(data)
-            let status = json[0].string
-            self.onlineLable.text = status
-        
     }
-}
     
     
     
@@ -99,7 +104,7 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     }
    
     func scrollToBottom() {
-        let indexPath = NSIndexPath(row: messageBase.count - 1, section: 0)
+        let indexPath = NSIndexPath(row: messageBase.count , section: 0)
         self.ChatTableview.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
 }
     

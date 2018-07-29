@@ -38,5 +38,8 @@ static  let socket = manager.defaultSocket
     func chageNameTest (name :String) {
         SocketIOManager.socket.emit("changeName", name)
     }
+    func getHistory () {
+        SocketIOManager.socket.emit("receiveHistory")
+    }
 
 }

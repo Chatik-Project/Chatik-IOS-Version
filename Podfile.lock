@@ -6,6 +6,7 @@ PODS:
     - Starscream (~> 3.0.2)
   - Starscream (3.0.5)
   - SwiftyJSON (4.1.0)
+  - SwiftyVK (3.1.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - SCLAlertView
   - Socket.IO-Client-Swift (~> 13.2.0)
   - SwiftyJSON (~> 4.0)
+  - SwiftyVK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftyJSON
+    - SwiftyVK
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: b94943e2fb916fe2f95244b9ed21828634002280
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftyVK: d28999229a714b52202e7db97df361de251c92c0
 
-PODFILE CHECKSUM: 989386039187ecd512a059d7e38fc11ba32d739c
+PODFILE CHECKSUM: 25a9b82ef09bf62e9d26e25e0d2f3c9d83a466d4
 
 COCOAPODS: 1.5.3

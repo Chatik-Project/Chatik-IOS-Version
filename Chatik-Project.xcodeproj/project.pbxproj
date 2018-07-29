@@ -104,7 +104,6 @@
 				C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */,
 				C17E42EA2109B6560040F94E /* ChatViewController.swift */,
 				C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */,
-				C15161FF210CD43100CDC0D9 /* SocketManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 			children = (
 				C17E42EC2109B6630040F94E /* MessageModel.swift */,
 				C140D7502109E51600023F3A /* UserModel.swift */,
+				C15161FF210CD43100CDC0D9 /* SocketManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +322,7 @@
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyVK/SwiftyVK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -331,6 +332,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyVK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
