@@ -22,7 +22,7 @@ class ProfilefViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passworfTextField: UILabel!
+    @IBOutlet weak var passworfTextField: UITextField!
     
     // CHANGES NAME
     

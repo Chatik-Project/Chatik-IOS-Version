@@ -73,7 +73,7 @@ class ChatViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             let json = JSON(data)
             let data = json[0]
             let content = data["content"].string
-            let date = data["date"].string
+            let date = data["dateFormat"].string
             let username = data["username"].string
             let message = Message(content: content!, username: username!, date: date!)
             self.messageBase.append(message)
