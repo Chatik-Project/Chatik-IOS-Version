@@ -9,12 +9,14 @@
 import UIKit
 import SocketIO
 import Alamofire
+import SwiftyJSON
 
 
 class ProfilefViewController: UIViewController {
    var socket: SocketIOClient!
    var manager:SocketManager!
     var name2:String = ""
+    var token:String = ""
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,14 +50,20 @@ class ProfilefViewController: UIViewController {
         if loginTextField.text != "" && passworfTextField.text != "" {
             let login: [String: Any] = ["email" : loginTextField.text!,"password" : passworfTextField.text!]
        
-            request("http://188.166.104.136:7777//login", method: .post, parameters: login).validate().responseJSON
+            request("http://188.166.104.136:7777/login", method: .post, parameters: login).validate().responseJSON
             { responseJSON in
-            print("Жопа \(login)")
+                
+              if responseJSON != nil {
+                
+                self.performSegue(withIdentifier: "LogInSegue", sender: nil)}
+              else {return}
+            print("Жопа \(responseJSON)")
             }
         } else {return}
     }
 
     @IBAction func RegistButton(_ sender: Any) {
+
     }
     
     
@@ -68,6 +76,11 @@ class ProfilefViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-       
-    }
+        if token == "" {
+            return
+        } else {
+            self.performSegue(withIdentifier: "LogInSegue", sender: nil)}
+        }
 }
+
+

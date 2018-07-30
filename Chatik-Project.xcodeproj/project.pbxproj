@@ -10,6 +10,8 @@
 		C11A74F4210BA9F100DC3639 /* ProfilefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */; };
 		C140D7512109E51600023F3A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C140D7502109E51600023F3A /* UserModel.swift */; };
 		C1516200210CD43100CDC0D9 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15161FF210CD43100CDC0D9 /* SocketManager.swift */; };
+		C178D27F210F2C4C0051A60F /* UserLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D27E210F2C4C0051A60F /* UserLogInViewController.swift */; };
+		C178D281210F2C800051A60F /* RegisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178D280210F2C800051A60F /* RegisViewController.swift */; };
 		C17E42EB2109B6560040F94E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EA2109B6560040F94E /* ChatViewController.swift */; };
 		C17E42ED2109B6630040F94E /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EC2109B6630040F94E /* MessageModel.swift */; };
 		C17E42EF2109B7480040F94E /* ChatMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */; };
@@ -46,6 +48,8 @@
 		C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilefViewController.swift; sourceTree = "<group>"; };
 		C140D7502109E51600023F3A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C15161FF210CD43100CDC0D9 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		C178D27E210F2C4C0051A60F /* UserLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogInViewController.swift; sourceTree = "<group>"; };
+		C178D280210F2C800051A60F /* RegisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisViewController.swift; sourceTree = "<group>"; };
 		C17E42EA2109B6560040F94E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C17E42EC2109B6630040F94E /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				C11A74F3210BA9F100DC3639 /* ProfilefViewController.swift */,
+				C178D27E210F2C4C0051A60F /* UserLogInViewController.swift */,
+				C178D280210F2C800051A60F /* RegisViewController.swift */,
 				C17E42EA2109B6560040F94E /* ChatViewController.swift */,
 				C17E42EE2109B7480040F94E /* ChatMessageCellTableViewCell.swift */,
 			);
@@ -366,11 +372,13 @@
 			files = (
 				C17E42ED2109B6630040F94E /* MessageModel.swift in Sources */,
 				C11A74F4210BA9F100DC3639 /* ProfilefViewController.swift in Sources */,
+				C178D281210F2C800051A60F /* RegisViewController.swift in Sources */,
 				C1516200210CD43100CDC0D9 /* SocketManager.swift in Sources */,
 				C17E42EF2109B7480040F94E /* ChatMessageCellTableViewCell.swift in Sources */,
 				C17E42EB2109B6560040F94E /* ChatViewController.swift in Sources */,
 				C140D7512109E51600023F3A /* UserModel.swift in Sources */,
 				C1E6FFB321060475007B10FF /* AppDelegate.swift in Sources */,
+				C178D27F210F2C4C0051A60F /* UserLogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
