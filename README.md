@@ -4,7 +4,7 @@
  # Screeshots
 ![alt text](LogoGit//Untitled.png "Screeshots")
 # Develop Team
-alexsahnykov - IOS - https://github.com/alexsahnykov &nbsp
-Fehty - BackEnd - https://github.com/orgs/Fehty //
-stikbomb - android - https://github.com/stikbomb //
-Zubogain - FrontEnd - https://github.com/Zubogain //
+alexsahnykov - IOS - https://github.com/alexsahnykov <br/>
+Fehty - BackEnd - https://github.com/orgs/Fehty <br/>
+stikbomb - android - https://github.com/stikbomb <br/>
+Zubogain - FrontEnd - https://github.com/Zubogain <br/>
