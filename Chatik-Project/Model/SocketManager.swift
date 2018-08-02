@@ -14,7 +14,7 @@ var manager:SocketManager!
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
-static    let manager = SocketManager(socketURL: URL(string: "http://188.166.104.136:7777/")!, config: [.log(true), .compress])
+    static    let manager = SocketManager(socketURL: URL(string: "http://138.68.234.86")!, config: [.log(true), .compress])
 
 static  let socket = manager.defaultSocket
 

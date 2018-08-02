@@ -12,8 +12,15 @@ import Foundation
 struct UserModel {
     let userId:String
     let userEmail:String
-    let userNickName:String
-    let userPassword:String
-    
-    
-}
+
+        
+        
+        init (userId: String, userEmail:String) {
+            
+            self.userId = userId
+            self.userEmail = userEmail
+   
+        }
+        
+    }
+

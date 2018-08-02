@@ -30,7 +30,7 @@ class UserLogInViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBAction func LogOutButton(_ sender: Any) {
-        request("http://188.166.104.136:7777/logout", method: .post).validate().responseJSON
+        request("http://138.68.234.86/logout", method: .post).validate().responseJSON
             { responseJSON in
                 print(responseJSON)}
       
@@ -38,7 +38,7 @@ class UserLogInViewController: UIViewController {
     }
     @IBAction func ChangeUSerNameButton(_ sender: Any) {
         let newName = ["newname":nameTextField.text!]
-        request("http://188.166.104.136:7777/changename", method: .post,parameters: newName).validate().responseJSON
+        request("http://138.68.234.86/changename", method: .post,parameters: newName).validate().responseJSON
             { responseJSON in
                 print(responseJSON)}
 

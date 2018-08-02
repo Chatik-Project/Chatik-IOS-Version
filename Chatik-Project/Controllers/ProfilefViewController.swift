@@ -48,11 +48,11 @@ class ProfilefViewController: UIViewController {
     
     @IBAction func LogInButton(_ sender: Any) {
         if loginTextField.text != "" && passworfTextField.text != "" {
-            let login: [String: Any] = ["email" : loginTextField.text!,"password" : passworfTextField.text!]
+            let login: [String: String] = ["username" : loginTextField.text!, "password" : passworfTextField.text!]
        
-            request("http://188.166.104.136:7777/login", method: .post, parameters: login).validate().responseJSON
+            request("http://138.68.234.86/login", method: .post, parameters: login).validate().responseJSON
             { responseJSON in
-                
+           
               if responseJSON != nil {
                 
                 self.performSegue(withIdentifier: "LogInSegue", sender: nil)}

@@ -15,9 +15,9 @@ class RegisViewController: UIViewController {
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBAction func RegButton(_ sender: Any) {
         if NameTextField.text != "" && LoginTextField.text != "" && PasswordTextField.text != "" {
-            let regist: [String: Any] = ["email" : LoginTextField.text!, "username" : NameTextField.text!, "password" : PasswordTextField.text!]
+            let regist: [String: Any] = ["username" : LoginTextField.text!, "name" : NameTextField.text!, "password" : PasswordTextField.text!]
             
-            request("http://188.166.104.136:7777/register", method: .post, parameters: regist).validate().responseJSON
+            request("http://138.68.234.86/register", method: .post, parameters: regist).validate().responseJSON
                 { responseJSON in
                     print("Жопа регистрация \(responseJSON)")
             }
